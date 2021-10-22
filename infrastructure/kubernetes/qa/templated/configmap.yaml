@@ -1,0 +1,76 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ######NAMESPACE######php-environment
+  labels:
+    qaInstance: ######NAMESPACE######
+data:
+  APP_NAME: LEGENDSPORTS
+  APP_ENV: local
+  APP_KEY: "base64:we9GwZknrIHsiBOkXBLx4+sNcioxhXuH+zOdl2fHZ+0="
+  APP_DEBUG: "true"
+
+  APP_URL_SSL: https://######DOMAIN_NAME######
+  APP_URL: http://######DOMAIN_NAME######
+  APP_URL_DOMAIN: ######DOMAIN_NAME######
+  BACKSTAGE_URL_SUBDOM: backstage
+
+  LOG_CHANNEL: stack
+
+  DB_CONNECTION: mysql
+  DB_HOST: 10.35.48.7
+  DB_PORT: "3306"
+  DB_DATABASE: ######DATABASE_NAME######
+
+  BROADCAST_DRIVER: pusher
+  CACHE_DRIVER: database
+  QUEUE_CONNECTION: uniquedbqueue
+  SESSION_DRIVER: database
+  SESSION_LIFETIME: "1440"
+
+  FACEBOOK_APP_ID: "808096603439567"
+  FACEBOOK_APP_SECRET: edb5ab97b962af1063b940f5dd3414d8
+  FACEBOOK_REDIRECT: /api/facebook/callback
+
+  GOOGLE_APP_ID: 510938305825-pgstumpfa2popfm3bop70bi3fv95l4lr.apps.googleusercontent.com
+  GOOGLE_APP_SECRET: EZOKYTw19kCxFYbA08FATsuv
+  GOOGLE_REDIRECT: /api/google/callback
+
+  GOOGLE_ACCOUNT_TYPE: service_account
+  GOOGLE_CLOUD_STORAGE_BUCKET: pickwins-bucket
+  GOOGLE_CLOUD_PROJECT_ID: legend-sports-production
+  GOOGLE_CLOUD_PRIVATE_KEY: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCd6IIcVK8GhoJb\nRnWFPtoxfZY1QyxspJjSqM+k1rOGFACCikoeCQ8uIyESfTkNtAqfGdn7vsvpzZLd\nNic3OhA/FYhg98TXPZdOV6a2zj9XdWrzFfPQgk6JYqYpjvZeK5zdSHMa4BB9VZoD\nKz16GECC/tTONq0TfVF/jpzJrpmtWhiGj4qS99gQw1ZZyyu0v0h7Bh4dYGnm7Xbc\nSsz9FrpVmlV2ds3LOh7ORFH/Wkd6Cxk6J4Ryte6ff4qu6O3n4Gq2j+GXz3A+A+4b\n9C9P9d5PF2JO9TmPoSZ0N1Fbi5BQikBhLM4QT1CrRZL+lTx+ZUH5QFbQC2DkUY6k\nvGVWNr07AgMBAAECgf81C+apnckuaAFiqEjSekrSVV4ghnBmDuVH323h8j5czFtf\nfxVnAaQX27VAgNCpydHHoOeZqn7WDDlKFucVpmvOxW0LJjD6Hba2mrtmreKZfthu\n0PEXGq9Hd9xaGayp9fy8WZpRbPQdJqSWa/A7E+qYFwNmQvfhlDfMohwJpJ37ncGI\ns44xiDZXpqzUtz1uOC6pqjtnL4Prt9Tni/7G0hw02Mj8ZB6km+jEyb/pqX/YZgv5\no3ULJNmw+DXokKYhANvC2N7zZGck/70kx7fThSez3ahoqg3YyLwWUyu3TmhSiVg0\n0Ha+TrYFSspDVEkUfBG53BlTeoo/WvHQhQuXIgECgYEAylUZB8OZOXY6OONfzb4+\nPI9jwtCfDga1wCkEx0Wkv/6rows9QF+4OJ6kbe9wJoEtaKRE06S0eXgCpk9of5Qn\nA+vk/CMp9AQemktZmc4p2JeoPecDwcEhb5Pr9GN594Hluhl8971K6HyjmOodklip\n6+F3c+QnyXjt1GgiFUYeYrsCgYEAx8rkYmD4M9CGFhMF8l1Skjl7+N1fXokyf0QB\n2xRFqeL3pwKDqBvxXxuwNVMnaeFbCMZzQ5yWnFem285PJNHIUqfSsHnRFWtN3FIJ\nIpXs0nLoHaKE7VrjMU5Bqj4XLr/s9S9mZoZNeRDbGSvtGgugGe5SVnYTnjAqmPy1\nhVENp4ECgYEAhQ2q9SEabOAjb2+Oe8TkNnzw1JbOUbH16VTQEJ7qtVsq0YA9mkyX\n35vrc2Pmc1u1Wb/Uhv0jtVFHJMjJZkQt1/VTUr9pAk+HNF3ioTMi74zjlTmKjeqM\nK0yx+LdF6I5iXJwQQvYXAYWdK5yhL7DgpP5SyEI8K9A7Tdfgue6vYqsCgYEAhZGp\nGfRGOy2/Vuak5SFq4IM51Gj7J1KFxfuLWhG1eRxaAPd3WV5FAhaauSu8f9a/a6Bw\n0tTPA/q9fNnyo2T0jf3Qp1bpZ25zgUX/AXZF+3QCpj1OrPhER2RQFiaojQKWwlxM\nE2LaTIPuVme9fdoj0PI5bcBG4UzGTb01BcnoXQECgYEAp2upDq/lAxTOUqrZt/NS\n6qjlhXR3GXj+vWarrpF5tXa9+AAU09QOlSwAMS7kYaxxkw9di3i3M3sc+6CSTmw7\nAAF7YB6mIPzTV2ZlVf0QcPSAgGjuF19CeznVUcp5aKPPHUlmV5phEddskVRiAjLa\n6jWVVojMTcuhccV3LMRLlF8=\n-----END PRIVATE KEY-----\n"
+  GOOGLE_CLOUD_PRIVATE_KEY_ID: d66fd9d798fd39aa771f37107faa82c77f8ee9e0
+  GOOGLE_CLIENT_EMAIL: 510938305825-compute@developer.gserviceaccount.com
+  GOOGLE_CLIENT_ID: "106959242167894036597"
+  GOOGLE_AUTH_URI: https://accounts.google.com/o/oauth2/auth
+  GOOGLE_TOKEN_URI: https://oauth2.googleapis.com/token
+  GOOGLE_AUTH_PROVIDER_X509_CERT_URL: https://www.googleapis.com/oauth2/v1/certs
+  GOOGLE_CLIENT_X509_CERT_URL: https://www.googleapis.com/robot/v1/metadata/x509/510938305825-compute%40developer.gserviceaccount.com
+
+  STORAGE_DISK: GCS
+  IMAGE_PATH: https://storage.googleapis.com/pickwins-bucket/prizes/
+
+  REDIS_HOST: 127.0.0.1
+  REDIS_PASSWORD: ""
+  REDIS_PORT: "6379"
+
+  PUSHER_APP_ID: legendsports
+  PUSHER_APP_KEY: my-secret-random-key
+  PUSHER_APP_SECRET: my-secret-random-secret-key
+  PUSHER_APP_CLUSTER: mt1
+  PUSHER_HOST: ######NAMESPACE######websockets
+
+  MIX_PUSHER_APP_KEY: my-secret-random-key
+  MIX_PUSHER_APP_CLUSTER: mt1
+
+  MAIL_MAILER: smtp
+  MAIL_HOST: "smtp.sendgrid.net"
+  MAIL_PORT: "587"
+  MAIL_USERNAME: apikey
+  MAIL_PASSWORD_OLD: "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"
+  MAIL_PASSWORD: "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"
+  MAIL_ENCRYPTION: tls
+
+  LEGENDS_ODDS_URL: https://odds.infra.qa.pickwins.com/
+  LEGENDS_ODDS_TOKEN: Phei0Pie0eiCuZaiBooRahyooJeeJ3oo

@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "moduleResolution": "node",
+        "module": "es6",
+        "target": "es5",
+        "sourceMap": true,
+        "lib": ["esnext", "es2017", "dom"],
+        "baseUrl": ".",
+        "esModuleInterop": true,
+        "downlevelIteration": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "skipLibCheck": true,
+        "paths": {
+            "vue-bootstrap-toasts": ["resources/js/general/types/vue-bootstrap-toasts.d.ts"]
+        }
+    }
+}

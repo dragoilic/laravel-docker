@@ -1,0 +1,36 @@
+@import variables
+
+.prize-category
+  display: flex
+  width: 75px
+  height: 75px
+  object-fit: cover
+  border-radius: 50%
+  background-color: white
+  justify-content: center
+  align-items: center
+  margin: auto
+  background-color: $color-bottlegreen
+  &__text
+    color:$light-1
+    font-size: 0.75rem
+
+  &:hover
+    background-color: $blue-3
+  
+  &--active
+    background-color: $blue-6 !important
+
+.prize-image
+  width: 200px
+  height: 200px
+  object-fit: contain
+
+.prize-image-ex
+  width: 37%
+  margin: auto
+
+.prize-image-ex1
+  display: flex
+  flex-direction: column
+

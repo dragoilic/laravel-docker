@@ -1,0 +1,102 @@
+@import variables
+
+// .text-input-white > .v-input__control > .v-input__slot > .v-text-field__slot > label, input 
+//   color: white !important
+.v-text-field.v-text-field--solo .v-label
+  font-style: italic !important
+  padding-right: 4px
+.v-input--selection-controls .v-input__slot>.v-label, .v-input--selection-controls .v-radio>.v-label
+  margin-bottom: 0
+.v-slider--horizontal .v-slider__thumb-label::before
+  position: absolute
+  content: ''
+  left: 0
+  right: 0
+  top: -18px
+  bottom: -18px
+  background: #1976d2
+  transform: translateY(0%) translateY(0px) translateX(0%) rotate(45deg)
+  border-radius: 5px
+.theme--dark.v-overlay
+  opacity: 0.33
+.v-dialog
+  box-shadow: none !important
+.theme--light.v-text-field--solo-inverted>.v-input__control>.v-input__slot
+  background: #f3f7fc !important
+.v-text-field.v-text-field--enclosed.v-text-field--single-line .v-text-field__prefix, .v-text-field.v-text-field--enclosed.v-text-field--single-line .v-text-field__suffix
+  margin-left: -12px
+  padding: 8px 12px !important
+  padding-left: 12px !important
+  background: #e0e7f0 !important
+.theme--light.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot input
+  color: black !important
+.v-application--is-ltr .v-input__slider .v-input__slot .v-label
+  margin-bottom: 0
+.v-slider--horizontal .v-slider__track-container
+  height: 4px !important
+
+.text-error-red > .v-input__control > .v-text-field__details > .v-messages
+  color: #cc0000
+// .v-application a
+  // color: inherit !important
+.myCaro-style .carousel-control-prev, .myCaro-style .carousel-control-next
+  display: none
+.myCaro-style .carousel-indicators
+  margin-left: 0
+  margin-bottom: 0
+  justify-content: flex-start
+.myCaro-style .carousel-indicators li
+  width: 7px
+  height: 7px
+  border-radius: 50%
+button, input, optgroup, select, textarea
+  font-family: Roboto,sans-serif !important
+.home_blog .carousel-indicators li
+  width: 30px
+body, html
+  overflow: auto
+.modal.myModal
+  background: none !important
+  .modal-content
+    border-radius: 10px
+  .modal-title
+    color: #008000 !important
+  .modal-body
+    text-align: center !important
+    font-size: 1.3rem !important
+  button
+    color: white
+    width: 100px
+    border-radius: 15px
+[disabled], [disable]:hover
+  background: darkgray !important
+.confirmBtn.theme--dark.v-btn.v-btn--disabled.v-btn--has-bg
+  background-color: darkgray !important
+  color: white !important
+.prize-form .theme--light.v-select.v-text-field--solo-inverted.v-input--is-focused .v-select__selections
+  color: black !important
+.v-date-picker-table table tbody tr:hover
+  background-color: initial
+@media ( max-width: 768px )
+  .toast-container
+    min-width: auto !important
+    bottom: 20px !important
+    min-width: 335px !important
+    top: auto !important
+    .toast
+      width: 335px !important
+  .theme--light.v-toolbar.v-sheet
+    height: 95px !important
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    background: #1A73E8 !important
+    box-shadow: none !important
+    .v-toolbar__content
+      width: calc(50% + 82px)
+@media (max-width: 992px)
+  ::-webkit-scrollbar
+    display: none
+  .layout__content__container__game
+    margin-top: 170px
+    height: calc(100% - 170px)

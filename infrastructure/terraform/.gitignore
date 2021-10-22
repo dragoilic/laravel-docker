@@ -1,0 +1,5 @@
+account.json
+*tfstate*
+.terraform
+*.tfvars
+*.log

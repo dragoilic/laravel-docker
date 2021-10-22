@@ -1,0 +1,78 @@
+version: '2'
+services:
+    nginx:
+        build:
+            context: ./docker
+            dockerfile: nginx.docker
+        volumes:
+            - ./:/var/www
+        ports:
+            - "8086:80"
+        links:
+            - app
+
+    app:
+        build:
+            context: ./docker
+            dockerfile: app.docker
+        volumes:
+            - ./:/var/www
+        links:
+            - database
+        environment:
+            - "DB_PORT=3306"
+            - "DB_HOST=database"
+            - "COMPOSER_MEMORY_LIMIT=-1"
+
+    websockets:
+        build:
+            context: ./docker
+            dockerfile: websockets.docker
+        volumes:
+          - ./:/var/www
+        ports:
+          - "6001:6001"
+        links:
+          - database
+        environment:
+          - "DB_PORT=3306"
+          - "DB_HOST=database"
+
+    scheduler:
+        build:
+            context: ./docker
+            dockerfile: scheduler.docker
+        volumes:
+          - ./:/var/www
+        links:
+          - database
+        environment:
+          - "DB_PORT=3306"
+          - "DB_HOST=database"
+
+    worker:
+      build:
+        context: ./docker
+        dockerfile: worker.docker
+      volumes:
+        - ./:/var/www
+      links:
+        - database
+      environment:
+        - "DB_PORT=3306"
+        - "DB_HOST=database"
+
+    database:
+        image: mysql:8
+        ports:
+          - "3306:3306"
+        environment:
+            - "MYSQL_ROOT_PASSWORD=secret"
+            - "MYSQL_DATABASE=legendsports"
+
+    node:
+        image: node:14.4.0-alpine3.12
+        volumes:
+          - ./:/app
+        working_dir: "/app"
+        command: ["/bin/sh", "-c", "yarn dev --watch"]

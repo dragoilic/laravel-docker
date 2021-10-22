@@ -1,0 +1,28 @@
+<?php
+namespace App\Http\Transformers\App;
+
+use App\Models\TournamentEvent;
+use League\Fractal\TransformerAbstract;
+
+class TournamentEventTransformer extends TransformerAbstract
+{
+    public function transform(TournamentEvent $tournamentEvent)
+    {
+        $apiEvent = $tournamentEvent->apiEvent;
+        return [
+            "external_id" => $apiEvent->api_id,
+            "id" => $tournamentEvent->id,
+            "provider" => $apiEvent->provider,
+            "score_away" => $apiEvent->score_away,
+            "score_home" => $apiEvent->score_home,
+            "sport_id" => $apiEvent->sport_id,
+            "league_id" => $apiEvent->league_id,
+            "starts_at" => format_datetime($apiEvent->starts_at),
+            "team_away" => $apiEvent->team_away,
+            "team_home" => $apiEvent->team_home,
+            "home_pitcher" => $apiEvent->pitcher_home,
+            "away_pitcher" => $apiEvent->pitcher_away,
+            "time_status" => str_replace('_', ' ', ucwords($apiEvent->time_status, '_')),
+        ];
+    }
+}

@@ -1,0 +1,144 @@
+@import variables
+
+.sidemenu button,
+.search button,
+.close-sidemenu
+  border: 0
+  background-color: transparent
+
+.sidemenu button i,
+.search button i
+  font-size: 30px
+  color: #000
+
+.close-sidemenu i
+  font-size: 30px
+  color: #fff
+
+.header-button
+  display: flex
+  align-items: center
+  justify-content: flex-end
+
+.login-button a
+  font-size: 18px
+  color: #000
+  display: inline-block
+
+.tournament-button a
+  font-size: 18px
+  color: #fff
+  border-radius: 50px
+  background-color: #218ada
+  padding: 20px 30px
+  display: inline-block
+  margin-right: 20px
+
+.sidemenu-icon-bar
+  position: fixed
+  left: 0
+  top: 0
+  background: #000
+  max-width: 80px
+  width: 5%
+  /*height: 100%*/
+  z-index: 9999
+  padding: 20px 0px
+  text-align: center
+  transform: translateX(-120px)
+  -webkit-transform: translateX(-120px)
+  -moz-transform: translateX(-120px)
+  -webkit-transition: 0.5s ease-in-out
+  -moz-transition: 0.5s ease-in-out
+  -o-transition: 0.5s ease-in-out
+  transition: 0.5s ease-in-out
+  overflow: auto
+
+.sub-sidemenu
+  position: fixed
+  left: -4%
+  top: 0
+  background: #0b4420
+  max-width: 320px
+  width: 20%
+  height: 100%
+  z-index: 999
+  padding: 40px 20px
+  /*text-align: center*/
+  transform: translateX(-320px)
+  -webkit-transform: translateX(-320px)
+  -moz-transform: translateX(-320px)
+  -webkit-transition: 0.5s ease-in-out
+  -moz-transition: 0.5s ease-in-out
+  -o-transition: 0.5s ease-in-out
+  transition: 0.5s ease-in-out
+  overflow: auto
+  color: #fff
+
+.sidemenu-icon-bar.active
+  transform: translateX(0px)
+  -webkit-transform: translateX(0px)
+  -moz-transform: translateX(0px)
+
+.sub-sidemenu.active
+  transform: translateX(120px)
+  -webkit-transform: translateX(120px)
+  -moz-transform: translateX(120px)
+
+.sidemenu-icon-bar ul
+  list-style: none
+  padding-top: 30px
+
+.sidemenu-icon-bar ul li
+  padding: 20px 0
+
+.sidemenu-icon-bar ul li a
+  font-size: 40px
+  color: #fff
+
+.sidemenu-icon-bar ul li.active
+  background-color: #fff
+
+.sidemenu-icon-bar ul li.active a
+    color: #000
+
+.container-wraper
+  max-width: 1140px
+  width:80%!important
+  padding-right: 15px
+  padding-left: 15px
+  margin-right: auto
+  margin-left: auto
+
+@media only screen and (max-width: 767px) 
+.container-wraper
+  max-width: 1140px
+  width:100%!important
+  padding-right: 15px
+  padding-left: 15px
+  margin-right: auto
+  margin-left: auto
+
+.sidemenu-icon-bar
+  max-width: 80px
+  width: 100%
+  padding: 20px 0
+  transform: translateX(-80px)
+  -webkit-transform: translateX(-80px)
+  -moz-transform: translateX(-80px)
+  
+.sub-sidemenu
+  max-width: 280px
+  width: 100%
+  padding: 20px
+  transform: translateX(-280px)
+  -webkit-transform: translateX(-280px)
+  -moz-transform: translateX(-280px)
+  
+.sub-sidemenu.active
+  transform: translateX(80px)
+  -webkit-transform: translateX(80px)
+  -moz-transform: translateX(80px)
+
+.dashboard-main-section
+  backgound-color: $color-mystic

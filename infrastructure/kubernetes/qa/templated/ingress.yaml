@@ -1,0 +1,52 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: ######NAMESPACE######web
+  labels:
+    qaInstance: ######NAMESPACE######
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: "letsencrypt"
+spec:
+  tls:
+    - hosts:
+        - ######DOMAIN_NAME######
+        - backstage.######DOMAIN_NAME######
+      secretName: ######NAMESPACE######-web-tls
+  rules:
+    - host: ######DOMAIN_NAME######
+      http:
+        paths:
+          - backend:
+              serviceName: ######NAMESPACE######web
+              servicePort: 80
+    - host: backstage.######DOMAIN_NAME######
+      http:
+        paths:
+          - backend:
+              serviceName: ######NAMESPACE######web
+              servicePort: 80
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: ######NAMESPACE######websockets
+  labels:
+    qaInstance: ######NAMESPACE######
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt"
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
+spec:
+  tls:
+    - hosts:
+        - ws.######DOMAIN_NAME######
+      secretName: ######NAMESPACE######-websocket-tls
+  rules:
+    - host: ws.######DOMAIN_NAME######
+      http:
+        paths:
+          - backend:
+              serviceName: ######NAMESPACE######web
+              servicePort: 6001

@@ -1,0 +1,445 @@
+@import variables
+/*home*/
+
+html 
+  scroll-behavior: smooth
+
+.home_body-styles
+  font-size: 16px!important
+  font-family: $font
+  /* background: #fafafa;*/
+  background-color: #fff
+
+.home_banner
+  padding-top:122px!important
+  background-image: url(../i/temp/home_banner.jpg)
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  min-height: 1000px
+
+.home_margin-bottom
+  margin-bottom:100px 
+
+.home_p
+  font-size: 14px
+  color: #fff
+
+.home_bg-game 
+  position: relative
+
+
+.home_image 
+  display: block
+  width: 100%
+  height: auto
+
+.home_bg-game
+  background-color: #000
+
+
+.home_overlay 
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  height: 100%
+  width: 100%
+  opacity: 0
+  transition: .5s ease
+  background-color: #090909
+
+.home_font-style
+  font-style: italic
+  font-size: 2rem
+
+
+.home_bg-game:hover .home_overlay 
+  opacity: 1
+
+.home_bg-game.active .home_overlay 
+  opacity: 1
+
+.home_text 
+  color: white
+  position: absolute
+  top: 50%
+  left: 50%
+  -webkit-transform: translate(-50%, -50%)
+  -ms-transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%)
+  text-align: center
+  font-size: 14px
+
+#home_review
+  background-color: #111122
+
+#home_howtoplay ul
+  text-decoration: none
+  list-style-type: none
+
+.home_bg-footer ul
+  text-decoration: none
+  list-style-type: none
+
+.home_bg-footer ul li
+  color:#999
+    
+.bg-blue
+  background-color: #483c83
+
+.home_bg-light
+  background-color: #218ada
+
+.home_bg-footer
+  background-color: #161616
+
+.home_bg-footer-bottom
+  background-color: #0f0f0f
+
+.navbar-light .navbar-nav .nav-link
+  color: #fff
+
+.navbar-light .navbar-nav .nav-link.active
+    color: red
+
+.home_about-bg
+  background-image: url(../i/temp/home_about-img-1.jpg)
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+
+
+.home_about-bg p
+  font-size: 14px
+
+.btn-outline-light
+  color: #f8f9fa
+  background-color: transparent
+  border:2px solid #f8f9fa
+  border-radius: 0px
+
+.home_bg-blue
+  background-color: #111122
+
+.home_header_bg
+  background-color: #007bff
+
+.home_blog .carousel-indicators 
+  left: 0
+  top: auto
+  bottom: -40px
+
+/* The colour of the indicators */
+.home_blog .carousel-indicators li 
+  background: #a3a3a3
+  border-radius: 50%
+  width: 8px
+  height: 8px
+
+
+.home_blog .carousel-indicators .active 
+  background: #707070
+
+.home_card-border-radius
+  border-radius: 0px
+  border:1px solid #d7d7d7!important
+
+.home_star
+  color:#ffd200
+
+.home_bg-game1
+  background-image: url(../i/temp/home_game1.jpg)
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+
+.home_bg-game2
+  background-image: url(../i/temp/home_game2.jpg)
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+
+/*carousel*/
+.home_carousel-card .card 
+  border: none
+
+.home_carousel-card .card .carousel-item 
+  min-height: 190px
+
+.home_carousel-card .card .carousel-caption 
+  padding: 0
+  right: 15px
+  left: 15px
+  top: 15px
+  color: #3d3d3d
+  /*border: 1px solid #ccc*/
+  min-height:175px
+  padding: 15px
+
+.home_carousel-card .card .carousel-caption .col-sm-3 
+  display: flex
+  align-items: center
+
+.home_carousel-card .card .carousel-caption .col-sm-9 
+  text-align: left
+
+.home_carousel-card .card .carousel-control-prev, .card .carousel-control-next 
+  color: #3d3d3d !important
+  opacity: 1 !important
+
+.home_carousel-card .carousel-control-prev-icon, .carousel-control-next-icon 
+  background-image: none
+  color: #333
+  font-size: 14px
+  background-color: #fff
+  height: 32px
+  line-height: 32px
+  width: 32px
+
+.home_carousel-card .carousel-control-prev-icon:hover, .carousel-control-next-icon:hover 
+  opacity: 0.85
+
+.home_carousel-card .carousel-control-prev 
+  left: 40%
+  top: 110%
+
+.home_carousel-card .carousel-control-next 
+  right: 40%
+  top: 110%
+
+.home_carousel-card .midline 
+  width: 60px
+  border-top: 1px solid #d43025
+
+.home_carousel-card .carousel-caption h2 
+  font-size: 14px
+
+.home_carousel-card .carousel-caption h2 span 
+  color: #cd3a54
+
+@media (min-width: 320px) and (max-width: 575px) 
+  .home_carousel-card .carousel-caption 
+    position: relative
+
+.home_carousel-card .card .carousel-caption 
+  left: 0
+  top: 0
+  margin-bottom: 15px
+
+.home_carousel-card .card .carousel-caption img 
+  margin: 0 auto
+
+.home_carousel-card .carousel-control-prev 
+  left: 35%
+  top: 105%
+
+.home_carousel-card .carousel-control-next 
+  right: 35%
+  top: 105%
+
+.home_carousel-card .card .carousel-caption h3 
+  margin-top: 0
+  font-size: 16px
+  font-weight: 700
+
+@media (min-width: 576px) and (max-width: 767px) 
+  .home_carousel-card .carousel-caption 
+    position: relative
+
+.home_carousel-card .card .carousel-caption 
+  left: 0
+  top: 0
+  margin-bottom: 15px
+
+.home_carousel-card .card .carousel-caption img 
+  margin: 0 auto
+
+.home_carousel-card .card .carousel-caption h3, .card .carousel-caption p 
+  text-align: center
+
+.home_carousel-card .carousel-control-prev 
+  left: 35%
+  top: 105%
+
+.home_carousel-card .carousel-control-next 
+  right: 35%
+  top: 105%
+
+
+@media (min-width: 767px) and (max-width: 991px) 
+  .home_carousel-card .card .carousel-caption h3 
+    margin-top: 0
+    font-size: 16px
+    font-weight: 700
+
+.home_text 
+  color: white
+  position: absolute
+  top: 50%
+  left: 50%
+  -webkit-transform: translate(-50%, -50%)
+  -ms-transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%)
+  text-align: center
+  font-size: 10px
+
+.home_border-bottom 
+  border-bottom: 1px solid #dee2e6 !important
+  border-bottom-width: 1px !important
+  border-bottom-style: solid !important
+  border-bottom-color: rgb(222, 226, 230) !important
+
+/*faq*/
+.home_faq .faq-nav 
+  flex-direction: row
+  margin: 0 0 32px
+  border-radius: 50px
+  border: 1px solid #218ada
+  box-shadow: 0 1px 5px rgba(85, 85, 85, 0.15)
+  justify-content: center
+
+.home_faq .faq-nav .nav-link 
+  position: relative
+  display: block
+  margin: 0
+  padding: 13px 16px
+  /* background-color: #fff*/
+  border: 0
+  border-bottom: 1px solid #ddd
+  border-radius: 0
+  color: #616161
+  transition: background-color 0.2s ease
+
+.home_faq .faq-nav .nav-link:hover 
+  color:#218ada
+
+.home_faq .faq-nav .nav-link.active 
+  /* background-color: #f6f6f6*/
+  font-weight: 700
+  color: #218ada
+  background-color: transparent
+
+.home_faq .faq-nav .nav-link:last-of-type 
+  border-bottom-left-radius: 2px
+  border-bottom-right-radius: 2px
+  border-bottom: 0
+
+.home_faq .faq-nav .nav-link i.mdi 
+  margin-right: 5px
+  font-size: 18px
+  position: relative
+
+.home_faq .faq-nav .nav-pills .nav-link.active, .nav-pills .show > .nav-link
+  background-color: transparent!important
+
+
+
+.home_tab-content .tab-content .card 
+  border-radius: 0
+  border:1px solid #218ada
+  background-color: transparent
+
+
+.home_tab-content .tab-content .tab-content .card-header 
+  padding: 15px 16px
+  border-radius: 0
+  background-color: transparent
+  border-bottom:1px solid #218ada
+
+.home_tab-content .tab-content .card-header h5 
+  margin: 0
+
+.home_tab-content .tab-content .card-header h5 button 
+  display: block
+  width: 100%
+  padding: 0
+  border: 0
+  font-weight: 700
+  color: rgba(0, 0, 0, 0.87)
+  text-align: left
+  white-space: normal
+
+.home_tab-content .tab-content .card-header h5 button:hover, .tab-content .card-header h5 button:focus, .tab-content .card-header h5 button:active, .tab-content .card-header h5 button:hover:active 
+  text-decoration: none
+
+.home_tab-content .tab-content .card-body p 
+  color: #616161
+
+.home_tab-content .tab-content .card-body p:last-of-type 
+  margin: 0
+
+.home_tab-content .accordion > .card:not(:first-child) 
+  border-top: 0
+
+.home_tab-content .collapse.show .card-body 
+  border-bottom: 1px solid #218ada
+
+.home_typewriter h1 
+  color: #fff
+  /*font-family: monospace*/
+  font-size: 5rem!important
+  line-height: 6rem
+  overflow: hidden /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange /* The typwriter cursor */
+  white-space: nowrap /* Keeps the content on a single line */
+  margin: 0 auto /* Gives that scrolling effect as the typing happens */
+  /* letter-spacing: .15em  */ /* Adjust as needed */
+  animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite
+
+@media (max-width: 575px)
+  .home_typewriter h1 
+    white-space: break-spaces
+    font-size: 3rem!important
+    line-height: 4rem
+
+@media (min-width: 767px) and (max-width: 991px)
+  .home_typewriter h1 
+    white-space: break-spaces
+    font-size: 4rem!important
+    line-height: 4rem
+
+
+/* The typing effect */
+@keyframes typing 
+  from  
+    width: 0 
+  to  
+    width: 100% 
+
+/* The typewriter cursor effect */
+@keyframes blink-caret 
+  from, to 
+    border-color: transparent 
+  50% 
+    border-color: transparent 
+
+#home_myBtn 
+  display: none
+  position: fixed
+  bottom: 20px
+  right: 30px
+  z-index: 99
+  font-size: 30px
+  border: none
+  outline: none
+  background-color: #007bff
+  color: white
+  cursor: pointer
+  padding: 0px 18px
+  border-radius: 0px
+
+#home_myBtn:hover 
+  background-color: #0069d9
+
+.socialite-list
+  display: flex
+
+.socialite-list li
+  display: inline-block
+  margin-right: 15px
+
+.prize-img 
+  width: auto
+  height: 175px
